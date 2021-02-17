@@ -93,9 +93,9 @@ def print_iter(res_file='result.txt'):
 class GraphIterator(object):
     def __init__(self, gr):
         if isinstance(gr, ScienceGraph):
-            self._gen = nx.connected_components(gr.gr)
+            self._gen = nx.enumerate_all_cliques(gr.gr)
         elif isinstance(gr, nx.Graph):
-            self._gen = nx.connected_components(gr)
+            self._gen = nx.enumerate_all_cliques(gr)
         else:
             self._gen = None
 
@@ -107,9 +107,8 @@ class GraphIterator(object):
 
 
 if __name__ == '__main__':
-    path = "../test/scigraph/case3"
+    path = "../test/scigraph/case1"
     graph = ScienceGraph()
     graph.read_dir(path)
     for comp in GraphIterator(graph):
-        print(comp == {'A a', 'B b', 'C c'})
         print(comp)

@@ -30,6 +30,7 @@ def remove_dir_r(path):
 
 
 if __name__ == '__main__':
+    print(os.getcwd())
     remove_dir_r('../test')
     header = 'Names Seq'
 

@@ -60,15 +60,35 @@ TEST_CASES_SCIENCE_G = [
         fun='scigraph',
         name='base',
         path='test/scigraph/case1',
-        answer=[{'A a', 'C c', 'B b'}]
+        answer=[
+            ['A a'],
+            ['B b'],
+            ['C c'],
+            ['A a', 'B b'],
+            ['A a', 'C c'],
+            ['B b', 'C c'],
+            ['A a', 'B b', 'C c'],
+        ]
     ),
     Case(
         fun='scigraph',
         name='base',
         path='test/scigraph/case2',
         answer=[
-            {'C c', 'B b', 'A a'},
-            {'G c', 'E b', 'D a'}
+            ['A a'],
+            ['B b'],
+            ['C c'],
+            ['D a'],
+            ['E b'],
+            ['G c'],
+            ['A a', 'B b'],
+            ['A a', 'C c'],
+            ['B b', 'C c'],
+            ['D a', 'E b'],
+            ['D a', 'G c'],
+            ['E b', 'G c'],
+            ['A a', 'B b', 'C c'],
+            ['D a', 'E b', 'G c'],
         ]
     ),
     Case(
@@ -76,8 +96,26 @@ TEST_CASES_SCIENCE_G = [
         name='base',
         path='test/scigraph/case3',
         answer=[
-            {'H h', 'D d', 'F f'},
-            {'B b', 'A a', 'C c', 'E e', 'G g'}
+            ['D d'],
+            ['F f'],
+            ['H h'],
+            ['A a'],
+            ['B b'],
+            ['C c'],
+            ['E e'],
+            ['G g'],
+            ['D d', 'F f'],
+            ['D d', 'H h'],
+            ['F f', 'H h'],
+            ['A a', 'B b'],
+            ['A a', 'C c'],
+            ['A a', 'E e'],
+            ['A a', 'G g'],
+            ['B b', 'C c'],
+            ['E e', 'G g'],
+            ['D d', 'F f', 'H h'],
+            ['A a', 'B b', 'C c'],
+            ['A a', 'E e', 'G g']
         ]
     ),
 ]
